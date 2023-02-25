@@ -23,6 +23,7 @@
     left: 0;
     -webkit-animation: slider-one 12s linear infinite;
             animation: slider-one 12s linear infinite;
+    z-index: -1;        
   }
   
   .slider-one .slider-one-image,
@@ -298,7 +299,7 @@
 /* CSS */
 .button-48 {
   appearance: none;
-  background:orange;
+  background:#b97553;
   border:3px solid white !important;
   border-width: 0;
   box-sizing: border-box;
@@ -357,4 +358,13 @@
 .button-48 span {
   z-index: 1;
   position: relative;
+}
+
+.button{
+  position:absolute;
+  left:5%;
+}
+.button2{
+  position:absolute;
+  left:20%;
 }

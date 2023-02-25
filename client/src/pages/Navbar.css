@@ -1,0 +1,13 @@
+.nav{
+    display:flex;
+}
+.btn{
+    color: #FFFFFF;
+    position: absolute;
+    z-index: 22;
+   right:5%;
+   font-size: 40px;
+  
+  }
+  
+

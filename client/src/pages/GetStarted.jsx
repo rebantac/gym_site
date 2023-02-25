@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Footer } from '../components';
 import './Getstarted.css';
 // import logo from '../assets/logo.png'
 import Navbar from './Navbar';
@@ -54,6 +55,7 @@ const GetStarted = () => {
           <Link to='/login-gym-owner'><button className='button-48 w3-container w3-center w3-animate-zoom button2'>Login as Gym Owner</button></Link>
         </div>
       )}
+      <Footer className='footer'></Footer>
     </div>
   )
 }

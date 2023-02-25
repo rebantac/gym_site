@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Getstarted.css';
+// import logo from '../assets/logo.png'
+import Navbar from './Navbar';
+
 
 
 const GetStarted = () => {
@@ -8,6 +11,8 @@ const GetStarted = () => {
 
   return (
     <div>
+
+<Navbar />
       <div class="slider-one">
         <div class="slider-one-image">
             <div class="slider-text">
@@ -45,8 +50,8 @@ const GetStarted = () => {
         </button>
       ) : (
         <div >
-          <Link to='/login-user'><button className='button-48 w3-container w3-center w3-animate-zoom'>Login as Client</button></Link>
-          <Link to='/login-gym-owner'><button className='button-48'>Login as Gym Owner</button></Link>
+          <Link to='/login-user'><button className='button-48 w3-container w3-center w3-animate-zoom button1'>Login as Client</button></Link>
+          <Link to='/login-gym-owner'><button className='button-48 w3-container w3-center w3-animate-zoom button2'>Login as Gym Owner</button></Link>
         </div>
       )}
     </div>

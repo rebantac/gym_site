@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { FormField } from '../components';
+import "./LogingymOwner.css"
+import trainer from "../assets/trainer.jpg"
 
 const LoginGymOwner = () => {
   const navigate = useNavigate() // helps to go back to the home page
@@ -32,13 +34,21 @@ const LoginGymOwner = () => {
 
 
   return (
-    <section>
-      <div>GYM OWNER SIGN UP</div>
+    <section className='whole'>
+      <div className="part1">
+    <img className='image' src={trainer} alt="" />
+      </div>
+      <div className='part2'>
+        <div className="head">
+        <h2>GYM OWNER SIGN UP
+        </h2>
+        </div>
 
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
 
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className='in_form'>
+          <div className="parent">
+            <div className="child1">
           <FormField
             labelName='Your Name'
             type='text'
@@ -81,7 +91,8 @@ const LoginGymOwner = () => {
             value={form.registrationFee}
             handleChange={handleChange}
           />
-          
+          </div>
+          <div className="child2">
           <FormField
             labelName='Monthly Fee'
             type='number'
@@ -116,19 +127,21 @@ const LoginGymOwner = () => {
             value={form.trainer}
             handleChange={handleChange}
           />
-          
+          </div>
+          </div>
         </div>
 
-        <div>
+        <div className='mt-10 text'>
           <p>After Submission - Log In into Application</p>
 
-          <button
+          <button className='btn_'
             type='submit'
           >
             Submit
           </button>
         </div>
       </form>
+      </div>
     </section>
   )
 }

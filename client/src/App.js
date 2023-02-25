@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 
-import {  Footer } from './components';
-import { Home, Profile, GetStarted, LoginUser, LoginGymOwner, Dashboard  } from './pages'
+import { Footer } from './components';
+import { Home, Profile, GetStarted, LoginUser, LoginGymOwner, Dashboard, SignIn, GymDetail  } from './pages'
 
 import './App.css';
 
@@ -24,6 +24,10 @@ function App() {
           <Route path='/dashboard' element={<Dashboard />}/>
 
           <Route path='/login-gym-owner' element={<LoginGymOwner />}/>
+
+          <Route path='/sign-in' element={<SignIn />}/>
+
+          <Route path='/gym/:id' element={<GymDetail/>} />
         </Routes>
 
         <Footer />

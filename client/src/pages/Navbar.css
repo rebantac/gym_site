@@ -6,6 +6,7 @@
     position: absolute;
     z-index: 22;
    right:5%;
+
    font-size: 16px;
   background:transparent;
   margin-top:2%;
@@ -70,3 +71,6 @@
     transform: scale(1,1);
   }
 
+ .text {
+    padding-right: 7%;
+}

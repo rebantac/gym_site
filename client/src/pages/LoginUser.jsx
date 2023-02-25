@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { FormField } from '../components';
+import side from '../assets/side2.jpg'
+import './loginuser.css'
 
 const LoginUser = () => {
   const navigate = useNavigate() // helps to go back to the home page
@@ -25,18 +27,25 @@ const LoginUser = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    navigate('/home');
+    navigate('/');
   }
 
 
   return (
-    <section>
-      <div>CLIENT SIGN UP</div>
+    <section className='whole'>
+      <div className="part1">
+         <img className='image' src={side}alt="" />
+      </div>
+      <div className="part2">
+      <div className='head'>
+        <h2>R E G I S T R A T I O N
+        </h2>
+        </div>
 
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+     
 
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className='in_form'>
           <FormField
             labelName='Your Name'
             type='text'
@@ -91,16 +100,17 @@ const LoginUser = () => {
           />
         </div>
 
-        <div className="mt-10">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        <div className="mt-10 text">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 
-          <button
+          <button className='btn_'
             type='submit'
           >
             Submit
           </button>
         </div>
       </form>
+      </div>
     </section>
   )
 }

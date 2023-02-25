@@ -1,25 +1,52 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Getstarted.css';
+
 
 const GetStarted = () => {
   const [getStart, setGetStart] = useState(true)
 
   return (
     <div>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      </p>
+      <div class="slider-one">
+        <div class="slider-one-image">
+            <div class="slider-text">
+                <h1>Ride Fast or Stay Home</h1>
+                <p>Strength does not come from physical capacity. It comes from an indomitable will.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-two">
+        <div class="slider-two-image">
+            <div class="slider-text">
+                <h1>Shine Like a diamond in the Dark</h1>
+                <p>People are like stained glass windows, they sparkle and shine when the sun is out, but when darkness
+                    sets in their true beauty is revealed only if there is a light from within</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-three">
+        <div class="slider-three-image">
+            <div class="slider-text">
+                <h1>leave sooner, drive slower, live longer</h1>
+                <p>driving is not my hobby it's my feeling. I only love FAST CARS because I don't believe slow and
+                    steady wins the race.</p>
+            </div>
+        </div>
+    </div>
 
       {getStart ? (
-        <button
+        <button className='button-48'
           onClick={() => setGetStart(false)}
         >
           Get Started
         </button>
       ) : (
-        <div>
-          <Link to='/login-user'><button>Login as Client</button></Link>
-          <Link to='/login-gym-owner'><button>Login as Gym Owner</button></Link>
+        <div >
+          <Link to='/login-user'><button className='button-48 w3-container w3-center w3-animate-zoom'>Login as Client</button></Link>
+          <Link to='/login-gym-owner'><button className='button-48'>Login as Gym Owner</button></Link>
         </div>
       )}
     </div>

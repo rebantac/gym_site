@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 
 import { Navbar, Footer } from './components';
-import {Home, Profile, GetStarted } from './pages'
+import { Home, Profile, GetStarted, LoginUser, LoginGymOwner, Dashboard  } from './pages'
 
 import './App.css';
 
@@ -18,6 +18,12 @@ function App() {
           <Route path='/home' element={<Home />}/>
 
           <Route path='/profile' element={<Profile />}/>
+
+          <Route path='/login-user' element={<LoginUser />}/>
+
+          <Route path='/dashboard' element={<Dashboard />}/>
+
+          <Route path='/login-gym-owner' element={<LoginGymOwner />}/>
         </Routes>
 
         <Footer />

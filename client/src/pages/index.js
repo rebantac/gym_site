@@ -4,6 +4,7 @@ import GetStarted from "./GetStarted";
 import LoginUser from "./LoginUser";
 import Dashboard from "./Dashboard";
 import LoginGymOwner from "./LoginGymOwner";
+import SignIn from "./SignIn";
 
 export {
   Home,
@@ -12,4 +13,5 @@ export {
   LoginUser,
   Dashboard,
   LoginGymOwner,
+  SignIn,
 };

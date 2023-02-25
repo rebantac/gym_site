@@ -1,0 +1,24 @@
+[
+    {
+        "id" : "G001",
+        "name" : "Chris McGraw",
+        "gym_name" : "Gold Gym",
+        "email" : "goldgym@gmail.com",
+        "registrationFee" : 100,
+        "monthlyFee" : 50,
+        "contact" : "9876543210",
+        "address" : "46th Baker's Street",
+        "trainer" : 10
+    },
+    {
+        "id" : "G002",
+        "name" : "Kenny Sebastian",
+        "gym_name" : "Platino Fitness",
+        "email" : "platino@gmail.com",
+        "registrationFee" : 200,
+        "monthlyFee" : 90,
+        "contact" : "9886343210",
+        "address" : "90th Heaven's Street",
+        "trainer" : 22
+    }
+]

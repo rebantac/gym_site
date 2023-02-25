@@ -5,6 +5,7 @@ import LoginUser from "./LoginUser";
 import Dashboard from "./Dashboard";
 import LoginGymOwner from "./LoginGymOwner";
 import SignIn from "./SignIn";
+import GymDetail from "../pages/GymDetail";
 
 export {
   Home,
@@ -14,4 +15,5 @@ export {
   Dashboard,
   LoginGymOwner,
   SignIn,
+  GymDetail
 };

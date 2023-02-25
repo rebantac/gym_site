@@ -3,6 +3,7 @@ import FormField from "./FormField";
 import UserNavbar from "./UserNavbar";
 import GymCard from "./GymCard";
 import Detail from "./Detail";
+import Loader from "./Loader";
 
 export {
     Footer,
@@ -10,4 +11,5 @@ export {
     UserNavbar,
     GymCard,
     Detail,
+    Loader,
 }

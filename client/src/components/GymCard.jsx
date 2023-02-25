@@ -5,16 +5,12 @@ const GymCard = ({
   id,
   name,
   gym_name,
-  email,
   registrationFee,
   monthlyFee,
-  address,
-  trainer,
-  contact,
 }) => {
   return (
     <section>
-      <Link to={`/book/${id}`}>
+      <Link to={`/gym/${id}`}>
         <div style={{ padding: '20px' }}>
           <p>{gym_name}</p>
           <p>Maintained by {name}</p>

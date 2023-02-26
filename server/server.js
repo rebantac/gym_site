@@ -6,6 +6,9 @@ const user = require('./routes/userRoutes')
 const mongoose = require('mongoose')
 const bodyparser = require('body-parser')
 const gym = require('./routes/gymRoutes')
+var cors = require('cors')
+
+app.use(cors())
 
 app.use(bodyparser.json())
 

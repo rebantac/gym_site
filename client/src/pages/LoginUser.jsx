@@ -42,7 +42,8 @@ const LoginUser = () => {
       console.log(err)
     }
     // console.log(form)
-    // navigate('/');
+    navigate('/');
+    alert("Registered Please Login")
   }
 
 

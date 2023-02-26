@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { FormField } from '../components';
+import signin from "../assets/signin.jpg";
+import gym3 from '../assets/gym3.jpg';
+import './SignIn.css';
 
 const SignIn = () => {
   const navigate = useNavigate()
@@ -32,6 +35,11 @@ const SignIn = () => {
 
   return (
     <div>
+      <div className='bg'>
+        <div src={gym3} alt=''>
+            
+        </div>
+      <div>
       <form onSubmit={handleSubmit}>
         <div>
           <FormField
@@ -70,7 +78,8 @@ const SignIn = () => {
           </button>
         </div>
       </form>
-
+      </div>
+      </div>
     </div>
   )
 }

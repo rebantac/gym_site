@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { FormField } from '../components';
+import { Footer, FormField } from '../components';
+
 import "./LogingymOwner.css"
 import trainer from "../assets/trainer.jpg"
 
@@ -142,6 +143,7 @@ const LoginGymOwner = () => {
         </div>
       </form>
       </div>
+      <Footer/>
     </section>
   )
 }

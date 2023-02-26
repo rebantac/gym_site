@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { FormField } from '../components';
+import { Footer, FormField } from '../components';
 import side from '../assets/side2.jpg'
 import './loginuser.css'
 
@@ -111,6 +111,7 @@ const LoginUser = () => {
         </div>
       </form>
       </div>
+      <Footer/>
     </section>
   )
 }

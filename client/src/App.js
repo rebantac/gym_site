@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 
-import { Footer } from './components';
+
 import { Home, Profile, GetStarted, LoginUser, LoginGymOwner, Dashboard, SignIn, GymDetail  } from './pages'
 
 import './App.css';
@@ -30,7 +30,7 @@ function App() {
           <Route path='/gym/:id' element={<GymDetail/>} />
         </Routes>
 
-        <Footer />
+        
       </div>
     </BrowserRouter>
   );

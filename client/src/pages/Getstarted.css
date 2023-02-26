@@ -385,10 +385,10 @@ font-family: 'Ubuntu', sans-serif;
 }
 
 
-.footer{
+/* .footer{
   position:absolute;
-  top:81%;
-}
+  bottom:0;
+} */
 
 .slider-text{
    top:10%;

@@ -11,8 +11,9 @@
 
 .footer{
     background-color: hsl(0deg 1% 27% / 20%);
-    position: absolute;
-    height: 19%;
+    position:absolute;
+    bottom:0%;
+        height: 19%;
     padding-top: 2%;
     width: 100%;
     display: flex;

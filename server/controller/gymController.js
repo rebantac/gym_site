@@ -5,14 +5,15 @@ const gym = require('../model/gym')
 const getShortGymDetail = async(req,res,next)=>{
     let gymData
     try{
-        gymData = await gym.find()
+        gymData = await gym.find({})
     }catch(err)
     {
         console.log(err)
     }
-    res.json({gyms: gymData.map(data=>{
-        data.toObject({getter:true})
-    })})
+    // res.json({gyms: gymData.map(data=>{
+    //     data.toObject({getter:true})
+    // })})
+    res.send({data:gymData})
 }
 
 //adding new gym data

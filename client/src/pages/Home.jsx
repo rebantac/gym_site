@@ -1,45 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 import { GymCard, UserNavbar } from '../components';
 
-// import data from '../assets/data.json';
-
-
+import data from '../assets/data.json';
+import desktop from "../assets/Desktop_.png"
+import "./home.css"
 const Home = () => {
-
-  const [data, setData] = useState([])
-  useEffect(() => {
-
-    const getGymData = async (req, res) => {
-      let response
-      try {
-        response = await fetch("http://localhost:5000/gyms/", {
-          method: 'GET',
-          headers: { 'Content-Type': 'application/json' }
-        })
-        console.log(response)
-      }
-      catch (err) {
-        console.log(err)
-      }
-      let result
-      if(response.ok){
-        result = await response.json()
-        console.log(result.data)
-      }
-      setData(result.data)
-      console.log(data)
-    }
-    getGymData()
-
-  }, [])
   return (
-    <div>
+    <div className='back'>
       <UserNavbar />
-
+      <img src={desktop} alt="" />
       {data && data.map((element) => {
         return (
-          <div>
+          <div className='card_'>
             <GymCard
               id={element.id}
               name={element.name}

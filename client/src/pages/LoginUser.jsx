@@ -43,7 +43,7 @@ const LoginUser = () => {
     }
     // console.log(form)
     navigate('/');
-    alert("")
+    alert("Registered Please Login")
   }
 
 

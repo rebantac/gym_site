@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { FormField } from '../components';
-
+import signinimg from "../assets/signinimg.jpg";
+import './Signin.css';
 
 const SignIn = () => {
-  // const gym_id = "G001";
-  const [gym_id,setId] = useState("")
+  const gym_id = "G001";
   const navigate = useNavigate()
 
   const [checkClient, setCheckClient] = useState(true)
-  // const [body,setBody] = useState({email:"",password:""})
+
   const [form, setForm] = useState({
     email: '',
     password: '',
@@ -25,72 +25,23 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     localStorage.setItem('gym_id', gym_id)
-    const body = form
-    let response
-    const getUserId = async (req, res, next) => {
 
-      try {
-        response = await fetch('http://localhost:5000/users/getId', {
-          method: "POST",
-          body: JSON.stringify({ ...body }),
-          headers: { 'Content-Type': 'application/json' }
-        })
-      }
-      catch (err) {
-        console.log(err)
-      }
-      let result
-      if (response.ok) {
-        result = await response.json()
-        // console.log(result.data)
-      }
-      setId(result.id)
-      console.log(gym_id)
-    }
-
-    const getGymId = async (req, res, next) => {
-      // console.log("gym")
-      console.log(body)
-      try {
-        response = await fetch("http://localhost:5000/gyms/getId", {
-          method: "POST",
-          body: JSON.stringify({ ...body }),
-          headers: { 'Content-Type': 'application/json' }
-        })
-        console.log(response)
-      }
-      catch (err) {
-        console.log(err)
-      }
-      let result
-      if (response.ok) {
-        result = await response.json()
-        // console.log(result.data)
-      }
-      console.log(result.id)
-      setId(result.id)
-      console.log(gym_id)
-    }
-    // checkClient ? (
-
-    //   navigate('/home')
-    // ) : (
-    //   navigate('/dashboard')
-    // )
-    if (checkClient) {
-      getUserId()
+    checkClient ? (
       navigate('/home')
-    }
-    else {
-      getGymId()
+    ) : (
       navigate('/dashboard')
-    }
+    )
   }
 
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className='whole'>
+    <div className='part1'>
+    <img className='signin' src={signinimg} style={{width:"40%" , height:"80%" , marginLeft:"2%"}} alt="" />
+    </div>
+    <div className='part2'>
+    
+    <form onSubmit={handleSubmit}>
         <div>
           <FormField
             labelName='Your Email'
@@ -113,14 +64,14 @@ const SignIn = () => {
         <div>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
 
-          <button
+          <button className='button3 bttn2'
             type='submit'
             onClick={() => setCheckClient(true)}
           >
             Log In as Client
           </button>
 
-          <button
+          <button className='button3 bttn3'
             type='submit'
             onClick={() => setCheckClient(false)}
           >
@@ -128,6 +79,8 @@ const SignIn = () => {
           </button>
         </div>
       </form>
+    </div>
+      
 
     </div>
   )

@@ -22,11 +22,12 @@ const SignIn = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    localStorage.setItem('gym_id', gym_id)
 
     checkClient ? (
       navigate('/home')
     ) : (
-      navigate(`/dashboard/${gym_id}`)
+      navigate('/dashboard')
     )
   }
 

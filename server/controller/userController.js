@@ -70,6 +70,21 @@ const registerGym = async (req, res, next) => {
 
 }
 
+const getCustomer = async(req,res,next)=>{
+    const {email,password} = req.body
+    let findCustomer
+    try{
+        findCustomer =await user.findOne(email)
+    }
+    catch(err)
+    {
+        console.log(err)
+        return next(new HttpError("Can't find registered user",400))
+    }
+    res.send(findCustomer._id)
+}
+
 exports.pushUser = pushUser
 exports.genQr = genQr
 exports.registerGym = registerGym
+exports.getCustomer = getCustomer 

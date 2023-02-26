@@ -2,18 +2,21 @@ import React from 'react'
 import { Link } from "react-router-dom";
 
 import logo from '../assets/logo.png'
+import "./userNavbar.css"
 
 const UserNavbar = () => {
   return (
-    <div >
+    <div className='main'>
       <div >
         <img className='logo' src={logo} alt='logo' height='50px' />
       </div>
-
-			<Link to='/profile'><button>PROFILE</button></Link>
-			<Link to=''><button>CONTACT US</button></Link>
+    
+      <div className='btnn'>
+			<Link to='/profile'><button className='btn_'>PROFILE</button></Link>
+			<Link to=''><button className='btn_'>CONTACT US</button></Link>
 
 			<p>Name</p>
+      </div>
     </div>
   )
 }

@@ -1,8 +1,8 @@
 .card{
-    position:absolute;
-    margin-top:9%;
-    height:400px;
-   margin-left:25%;
+    position: absolute;
+    margin-top: 9%;
+    height: 401px;
+    margin-left: 6%;
 }
 .card-title{
     position:absolute;
@@ -50,3 +50,4 @@
     border:none;
     
   }
+  

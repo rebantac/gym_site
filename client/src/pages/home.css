@@ -6,8 +6,17 @@
 }
 
 .back img{
-   width: 100%;
-   margin-top: 18%;
-   margin-bottom: -15%;
-   padding: 5%;
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: -27%;
+    padding: 12%;
+}
+.card_ {
+    display: inline-block;
+    margin-top: 10%;
+    width: 35%;
+    margin: -4%;
+}
+.heading{
+    font-size: 10%;
 }

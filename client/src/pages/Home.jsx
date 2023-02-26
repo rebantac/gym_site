@@ -10,6 +10,7 @@ const Home = () => {
     <div className='back'>
       <UserNavbar />
       <img src={desktop} alt="" />
+      {/* <h1 className='heading'>C H O O S E  Y  O U R  O W N  T R A I N E R </h1> */}
       {data && data.map((element) => {
         return (
           <div className='card_'>

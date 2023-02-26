@@ -2,6 +2,23 @@ const HttpError = require("../model/HttpError")
 const gym = require('../model/gym')
 
 //getting all gyms records in database
+const getGymId = async(req,res,next)=>{
+    const {email,password} = req.body
+    // console.log(email)
+    let findGym
+    try{
+        findGym = await gym.findOne({email:email})
+        // console.log("find")
+    }
+    catch(err)
+    {
+        console.log(err)
+        return next(new HttpError("Can't find registered user",400))
+    }
+    console.log(findGym)
+    res.send({id:findGym.id})
+}
+
 const getShortGymDetail = async(req,res,next)=>{
     let gymData
     try{
@@ -65,3 +82,4 @@ const gymSelectButton = async(req,res,next)=>{
 exports.pushGym = pushGym
 exports.getAllCustomer = getAllCustomer
 exports.getShortGymDetail = getShortGymDetail
+exports.getGymId = getGymId

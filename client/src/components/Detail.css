@@ -1,0 +1,52 @@
+.card{
+    position:absolute;
+    margin-top:9%;
+    height:400px;
+   margin-left:25%;
+}
+.card-title{
+    position:absolute;
+    
+    margin-top:25px;
+    height:40%;
+}
+
+.cardimg{
+   position:relative;
+    border-radius: 5px;
+    margin-top: 3%;
+    
+   
+    
+}
+
+
+.card-body{
+    text-align: left;
+    margin-top: 22px;
+    margin-left:50px;
+}
+
+.maintained{
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.gymname{
+    padding-top: 10px;
+    font-size: 17px;
+}
+
+.bttn{
+    width:150px;
+    transition-duration: 0.4s;
+    height:36px;
+}
+
+  
+  .bttn:hover {
+    background-color: #b97553; /* Green */
+   
+    border:none;
+    
+  }

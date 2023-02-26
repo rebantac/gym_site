@@ -1,0 +1,14 @@
+.main{
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+}
+/* .btn__{
+    width: 130%;
+    margin-right: 10%;
+} */
+
+.btnn{
+    display: flex;
+    flex-direction: row;
+}

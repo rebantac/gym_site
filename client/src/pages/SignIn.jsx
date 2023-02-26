@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { FormField } from '../components';
 
 const SignIn = () => {
+  const gym_id = "G001";
   const navigate = useNavigate()
 
   const [checkClient, setCheckClient] = useState(true)
@@ -25,7 +26,7 @@ const SignIn = () => {
     checkClient ? (
       navigate('/home')
     ) : (
-      navigate('/dashboard')
+      navigate(`/dashboard/${gym_id}`)
     )
   }
 

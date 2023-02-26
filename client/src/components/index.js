@@ -4,6 +4,7 @@ import UserNavbar from "./UserNavbar";
 import GymCard from "./GymCard";
 import Detail from "./Detail";
 import Loader from "./Loader";
+import UserDetail from "./UserDetail"
 
 export {
     Footer,
@@ -12,4 +13,5 @@ export {
     GymCard,
     Detail,
     Loader,
+    UserDetail
 }

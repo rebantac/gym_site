@@ -1,0 +1,18 @@
+[
+    {
+        "id" : "U001",
+        "name" : "Shyamal",
+        "email" : "shy@mal.com",
+        "height" : 160,
+        "weight" : 65,
+        "contact" : 9090909090
+    },
+    {
+        "id" : "U002",
+        "name" : "Roberta",
+        "email" : "roy@royce.com",
+        "height" : 200,
+        "weight" : 200,
+        "contact" : 909023434
+    }
+]

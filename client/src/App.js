@@ -30,7 +30,7 @@ function App() {
           <Route path='/gym/:id' element={<GymDetail/>} />
         </Routes>
 
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </BrowserRouter>
   );

@@ -3,12 +3,14 @@ import { useNavigate } from 'react-router-dom';
 
 import { FormField } from '../components';
 
+
 const SignIn = () => {
-  const gym_id = "G001";
+  // const gym_id = "G001";
+  const [gym_id,setId] = useState("")
   const navigate = useNavigate()
 
   const [checkClient, setCheckClient] = useState(true)
-
+  // const [body,setBody] = useState({email:"",password:""})
   const [form, setForm] = useState({
     email: '',
     password: '',
@@ -23,12 +25,66 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     localStorage.setItem('gym_id', gym_id)
+    const body = form
+    let response
+    const getUserId = async (req, res, next) => {
 
-    checkClient ? (
+      try {
+        response = await fetch('http://localhost:5000/users/getId', {
+          method: "POST",
+          body: JSON.stringify({ ...body }),
+          headers: { 'Content-Type': 'application/json' }
+        })
+      }
+      catch (err) {
+        console.log(err)
+      }
+      let result
+      if (response.ok) {
+        result = await response.json()
+        // console.log(result.data)
+      }
+      setId(result.id)
+      console.log(gym_id)
+    }
+
+    const getGymId = async (req, res, next) => {
+      // console.log("gym")
+      console.log(body)
+      try {
+        response = await fetch("http://localhost:5000/gyms/getId", {
+          method: "POST",
+          body: JSON.stringify({ ...body }),
+          headers: { 'Content-Type': 'application/json' }
+        })
+        console.log(response)
+      }
+      catch (err) {
+        console.log(err)
+      }
+      let result
+      if (response.ok) {
+        result = await response.json()
+        // console.log(result.data)
+      }
+      console.log(result.id)
+      setId(result.id)
+      console.log(gym_id)
+    }
+    // checkClient ? (
+
+    //   navigate('/home')
+    // ) : (
+    //   navigate('/dashboard')
+    // )
+    if (checkClient) {
+      getUserId()
       navigate('/home')
-    ) : (
+    }
+    else {
+      getGymId()
       navigate('/dashboard')
-    )
+    }
   }
 
 

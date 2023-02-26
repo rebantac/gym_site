@@ -81,7 +81,7 @@ const getCustomer = async(req,res,next)=>{
         console.log(err)
         return next(new HttpError("Can't find registered user",400))
     }
-    res.send(findCustomer._id)
+    res.send({id:findCustomer._id})
 }
 
 exports.pushUser = pushUser

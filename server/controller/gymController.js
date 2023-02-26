@@ -75,11 +75,22 @@ const getAllCustomer = async(req,res,next)=>{
 
 }
 
-const gymSelectButton = async(req,res,next)=>{
-
+const getGymById = async(req,res,next)=>{
+    const {id} = req.body
+    let gymData
+    try{
+        gymData = await gym.findById({_id:id})
+    }
+    catch(err)
+    {
+        console.log(err)
+    }
+    console.log(gymData)
+    res.send(gymData)
 }
 
 exports.pushGym = pushGym
 exports.getAllCustomer = getAllCustomer
 exports.getShortGymDetail = getShortGymDetail
 exports.getGymId = getGymId
+exports.getGymById = getGymById

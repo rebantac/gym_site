@@ -28,7 +28,20 @@ const LoginGymOwner = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    let response
+    let body = form
+    try{
+      response = await fetch('http://localhost:5000/gyms/pushGym',{
+        method:'post',
+        body:JSON.stringify({...body}),
+        headers: { 'Content-Type': 'application/json' }
+      })
+      console.log(response)
+    }
+    catch(err)
+    {
+      console.log(err)
+    }
     navigate('/');
   }
 

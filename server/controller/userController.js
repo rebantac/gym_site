@@ -6,7 +6,7 @@ const mongoose = require('mongoose')
 
 //add new user
 const pushUser = async (req, res, next) => {
-    const { name, email, password, height, weight, gym } = req.body
+    const { name, email, password, height, weight, contact } = req.body
     let newUser = await user.findOne({ email })
     if (newUser) {
         res.send({ code: 400, message: "Already registered" })
@@ -19,6 +19,7 @@ const pushUser = async (req, res, next) => {
         password,
         height,
         weight,
+        contact,
         gym:null
     })
 

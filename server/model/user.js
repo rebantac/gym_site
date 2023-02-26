@@ -23,6 +23,9 @@ const userSchema = new mongoose.Schema({
         type:Number,
         require:true
     },
+    contact:{
+        type:Number
+    },
     gym:{
         type:mongoose.Types.ObjectId,
         //required:true,
